@@ -26,7 +26,7 @@ The built-in Windows compression version does not require external software, but
 
 
 
-## Everything you need to know
+## Requirements
 
 To use these scripts correctly, you need a main folder containing:
 
@@ -58,43 +58,7 @@ You do not have to use NPS Browser or pkg2zip.
 
 What matters is that the folders and files are already arranged correctly.
 
-Quick Procedure
-
-1. Prepare a main working folder.
-2. Set up your preferred external tools to download games and decompress them from .pkg to the right folder structure.
-2. Make sure it contains app, addcont, and patch of your downloaded games.
-3. Place the BAT file from this repository in the same folder.
-4. Choose the BAT version you want to use:
--WinRAR-based
--7-Zip-based
--Windows built-in compression
-5. Run the selected BAT file.
-
-What the Script Does
-
-Once launched, the script will:
-
-1. Inspect the subfolders inside app, addcont, and patch, checking that the titleid has not already been compressed. If it has already been compressed, skip the TitleID.
-2. Use the TitleID as the main matching reference.
-3. Create a temporary folder.
-4. Rebuild the correct merged structure inside that temporary folder.
-5. Compress the rebuilt result into a final ZIP archive.
-6. Delete the temporary folder after compression is complete.
-
-Output
-The final archive is generated using this format:
-
-text
-TITLEID_Vita3k_ready.zip
-
-The ZIP is intended to contain the merged result of:
-
-the base game
-the related update data
-the related DLC data
-
-Recommended Preparation Tools
-This repository does not include direct external setup tools downloads.
+## Recommended Preparation Tools
 
 If you want a faster and easier workflow, you can use original external tools and guides to prepare the required folder structure:
 
@@ -118,7 +82,43 @@ If you choose to use NPS Browser together with pkg2zip, the preparation phase is
 
 Once the preparation is complete, open the configured output folder and run the BAT file of your choice.
 
-Limitations
+## Quick Procedure
+
+1. Prepare the main working folder.
+2. Set up your preferred external tools to download games and decompress them from .pkg to the right folder structure.
+2. Make sure it contains app, addcont, and patch of your downloaded games.
+3. Place the BAT file from this repository in the same folder.
+4. Choose the BAT version you want to use:
+-WinRAR-based
+-7-Zip-based
+-Windows built-in compression
+5. Run the selected BAT file.
+
+## What the Script Does
+
+Once launched, the script will:
+
+1. Inspect the subfolders inside app, addcont, and patch, checking that the titleid has not already been compressed. If it has already been compressed, skip the TitleID.
+2. Use the TitleID as the main matching reference.
+3. Create a temporary folder.
+4. Rebuild the correct merged structure inside that temporary folder.
+5. Compress the rebuilt result into a final ZIP archive.
+6. Delete the temporary folder after compression is complete.
+
+Output
+The final archive is generated using this format:
+
+```text
+TITLEID_Vita3k_ready.zip
+```
+
+The ZIP is intended to contain the merged result of:
+
+the base game
+the related update data
+the related DLC data
+
+## Limitations
 Unfortunately, it was not possible to automatically replace the TitleID with the real game name in the final ZIP filename.
 
 This is because the folder structure does not provide a constant and reliable reference to the actual game name.
