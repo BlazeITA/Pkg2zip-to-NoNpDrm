@@ -50,7 +50,7 @@ folder
 ├─ patch
 │  └─ TITLEID
 │     └─ patch files
-```text
+```
 
 The exact tool used to create this structure does not matter.
 
