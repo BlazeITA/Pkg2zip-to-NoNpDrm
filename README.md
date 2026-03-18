@@ -26,7 +26,7 @@ The built-in Windows compression version does not require external software, but
 
 
 
-## What You Need
+## Everything you need to know
 
 To use these scripts correctly, you need a main folder containing:
 
