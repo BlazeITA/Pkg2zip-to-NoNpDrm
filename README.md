@@ -138,6 +138,7 @@ The Windows built-in compression variant is the most limited option and may not 
 
 ## Notes
 
+- This project would not have been possible without the constant support of AI, as I do not have much experience with coding.
 - Windows only.
 - This repository does not redistribute NPS Browser, pkg2zip, WinRAR, 7-Zip, or other third-party tools.
 - Please obtain any optional external dependency only from its original source.
