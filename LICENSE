@@ -1,0 +1,28 @@
+Custom License for This Repository
+
+Copyright (c) Andrea Bietti
+
+Permission is granted to download, use, and modify the files in this repository for personal use.
+
+Permission is also granted to use this code, in whole or in part, as a basis for creating, modifying, and publishing derivative software, provided that all of the following conditions are met:
+1. The derivative software must be distributed free of charge.
+2. Proper attribution must be given to Andrea Bietti.
+3. A visible link to the original GitHub repository must be included in the documentation, repository page, about section, or equivalent location.
+
+Copying portions of this code into other scripts, tools, applications, or software is allowed only under the same conditions above, including attribution to Andrea Bietti and a link to the original GitHub repository.
+
+Direct redistribution of the original files from this repository is not allowed, whether unchanged, renamed, repackaged, mirrored, or reuploaded.
+Publicly sharing copies of the original files outside the original GitHub repository is prohibited.
+
+Publishing lightly modified or minimally changed versions of the original files as standalone replacements is not allowed.
+However, genuinely derivative software built from this code is allowed under the conditions of this license.
+
+Public forks of this repository are not permitted without prior written permission from Andrea Bietti.
+For permissions related to public forks, commercial use, or other exceptions, contact: andreabietti.business@gmail.com
+
+Commercial use is not permitted.
+This includes selling the code, including it in paid software, using it in commercial products or services, or distributing derivative works for a fee.
+
+Linking to the original GitHub repository page is allowed and encouraged.
+
+This software is provided "as is", without warranty of any kind, express or implied.
