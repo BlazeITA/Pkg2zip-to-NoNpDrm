@@ -2,7 +2,7 @@
 
 Automation scripts for compressing PlayStation Vita content into NoNpDrm-style ZIP archives ready for use with Vita3K.
 
-This project is for **Windows only**.
+This project is for **Windows 10/11 only**.
 
 The only real requirement is having the correct folder structure based on `app`, `addcont`, and `patch`.
 
