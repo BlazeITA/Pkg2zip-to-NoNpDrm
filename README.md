@@ -43,7 +43,7 @@ To use these scripts correctly, you need a main folder containing:
 
 You must also place the BAT file downloaded from this repository inside that same main folder.
 
-Required structure:
+Required final structure:
 
 ```text
 folder
@@ -57,6 +57,7 @@ folder
 ├─ patch
 │  └─ TITLEID
 │     └─ patch files
+├─ chosen_version.bat
 ```
 
 The exact tool used to create this structure does not matter.
