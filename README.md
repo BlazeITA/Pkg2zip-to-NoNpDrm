@@ -125,13 +125,15 @@ If you want a more readable filename, you can manually rename the final ZIP afte
 
 The Windows built-in compression variant is the most limited option and may not work reliably with games larger than about 2 GB.
 
-Notes
--Windows only.
--This repository does not redistribute NPS Browser, pkg2zip, WinRAR, 7-Zip, or other third-party tools.
--Please obtain any optional external dependency only from its original source.
--The only strict requirement is the correct folder structure.
--NPS Browser and pkg2zip are optional, but strongly recommended for convenience and speed.
--The generated archive is designed as a NoNpDrm-style merged ZIP intended for Vita3K use.
+## Notes
 
-License
+- Windows only.
+- This repository does not redistribute NPS Browser, pkg2zip, WinRAR, 7-Zip, or other third-party tools.
+- Please obtain any optional external dependency only from its original source.
+- The only strict requirement is the correct folder structure.
+- NPS Browser and pkg2zip are optional, but strongly recommended for convenience and speed.
+- The generated archive is designed as a NoNpDrm-style merged ZIP intended for Vita3K use.
+
+## License
+
 This repository is licensed under a custom non-commercial attribution license. See the LICENSE file for full terms. For permissions and exceptions, contact andreabietti.business@gmail.com.
