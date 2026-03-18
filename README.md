@@ -22,11 +22,18 @@ Included variants:
 - a BAT script that uses **7-Zip**
 - a BAT script that uses the built-in **Windows compression**
 
-The built-in Windows compression version does not require external software, but it has major size limitations and may fail with games larger than about 2 GB.
-
 
 
 ## Requirements
+
+- WinRAR — requires WinRAR.exe; supported in the script folder, a local WinRAR folder, standard install paths, or PATH.
+- 7-Zip — requires 7z.exe; supported in the script folder, a local 7-Zip folder, standard install paths, or PATH.
+- Windows built-in — no external software required, but less reliable for large archives.
+
+Windows built-in — no external software required, but less reliable for large archives.
+
+Recommendation
+WinRAR — recommended for its clearer compression progress display and for not having the file size limitations of the built-in Windows compression method.
 
 To use these scripts correctly, you need a main folder containing:
 
