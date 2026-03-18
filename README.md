@@ -74,17 +74,18 @@ The CFWaifu guide is an alternative walkthrough to the guidance already availabl
 
 If you choose to use NPS Browser together with pkg2zip, the preparation phase is usually much easier and faster.
 
-1. Right-click the game.
-2. Click **Download All** if available.
-3. If **Download All** is not available, click **Download and Unpack**.
-4. Then click **Check for Patches**.
-5. Download the available patch for that title.
+1. Prepare the main working folder.
+2. Right-click the game on NPS Browser.
+3. Click **Download All** if available.
+4. If **Download All** is not available, click **Download and Unpack**.
+5. Then click **Check for Patches**.
+6. Download the available patch for that title.
 
 Once the preparation is complete, open the configured output folder and run the BAT file of your choice.
 
 ## Quick Procedure
 
-1. Prepare the main working folder.
+1. Go to your main working folder.
 2. Set up your preferred external tools to download games and decompress them from .pkg to the right folder structure.
 2. Make sure it contains app, addcont, and patch of your downloaded games.
 3. Place the BAT file from this repository in the same folder.
