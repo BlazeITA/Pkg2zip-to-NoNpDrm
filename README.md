@@ -38,6 +38,7 @@ You must also place the BAT file downloaded from this repository inside that sam
 
 Required structure:
 
+```text
 folder
 ├─ addcont
 │  └─ TITLEID
@@ -49,6 +50,7 @@ folder
 ├─ patch
 │  └─ TITLEID
 │     └─ patch files
+
 
 The exact tool used to create this structure does not matter.
 
