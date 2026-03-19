@@ -132,7 +132,9 @@ Following the previous instructions will lead you to have the exact structure ne
 Once launched, the script will:
 
  1. Detect the available compressor for the chosen version.
+    
  2. Read the list of TITLEID folders inside app.
+    
  3. Check the source structure for each title and display:
 
 - GAME = [X] or [ ]
