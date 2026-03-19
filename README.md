@@ -12,9 +12,11 @@ Using **NPS Browser** and **pkg2zip** is optional, but strongly recommended beca
 
 ## What This Project Does
 
-This repository provides 3 batch-based compression workflows for already-unpacked PlayStation Vita content.
+This repository provides 3 batch-based compression workflows for already-unpacked PlayStation Vita games.
 
-It is meant for content that already follows the expected structure and needs to be merged and compressed into a final archive ready for Vita3K.
+It is designed for content that already follows the expected folder structure and needs to be merged into a final `.zip` archive containing the base game, all available DLC, and all available patches together.
+
+The resulting archive is compressed to save space, improve update and DLC management, and make the content ready for use with the Vita3K emulator.
 
 Included variants:
 
