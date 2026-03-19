@@ -75,11 +75,11 @@ What matters is that the folders and files are already arranged correctly.
 
 ## Tool-specific requirements
 
-WinRAR version — requires WinRAR.exe; supported in the script folder, a local WinRAR folder, standard install paths, or PATH. [cite:197]
+ - WinRAR version — requires WinRAR.exe; supported in the script folder, a local WinRAR folder, standard install paths, or PATH. [cite:197]
 
-7-Zip version — requires 7z.exe; supported in the script folder, a local 7-Zip folder, standard install paths, or PATH.
+ - 7-Zip version — requires 7z.exe; supported in the script folder, a local 7-Zip folder, standard install paths, or PATH.
 
-Windows built-in version — no external software required, but less reliable for large archives.
+ - Windows built-in version — no external software required, but less reliable for large archives.
 
 Recommendation
 WinRAR — recommended because it lets you monitor the progress of an ongoing compression process and handles large files properly.
