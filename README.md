@@ -18,12 +18,6 @@ It is designed for content that already follows the expected folder structure an
 
 The resulting archive is compressed to save space, improve update and DLC management, and make the content ready for use with the Vita3K emulator.
 
-Included variants:
-
-- a BAT script that uses **WinRAR**
-- a BAT script that uses **7-Zip**
-- a BAT script that uses the built-in **Windows compression**
-
 ## Requirements
 
 ### Common requirements
@@ -63,6 +57,8 @@ You do not have to use NPS Browser or pkg2zip.
 What matters is that the folders and files are already arranged correctly.
 
 ### Tool-specific requirements
+
+Based on which variant of the BAT you prefer to use:
 
  - WinRAR version — requires WinRAR.exe; supported in the script folder, a local WinRAR folder, standard install paths, or PATH.
 
@@ -184,8 +180,7 @@ Some game names may need character cleanup because Windows filenames do not allo
 
 The Windows built-in compression variant is the most limited option and may not work reliably with games larger than about 2 GB.
 
-Notes
-Windows only.
+## Notes & Recap
 
 This repository does not redistribute NPS Browser, pkg2zip, WinRAR, 7-Zip, or other third-party tools.
 
@@ -197,7 +192,7 @@ NPS Browser and pkg2zip are optional, but strongly recommended for convenience a
 
 The generated archive is designed as a NoNpDrm-style merged ZIP intended for Vita3K use.
 
-This project was developed with AI assistance. [cite:198]
+This project was developed with AI assistance.
 
-License
+## License
 This repository is licensed under a custom non-commercial attribution license. See the LICENSE file for full terms. For permissions and exceptions, contact andreabietti.business@gmail.com.
