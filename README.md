@@ -87,11 +87,11 @@ WinRAR — recommended because it lets you monitor the progress of an ongoing co
  ## Recommended Preparation Tools
 If you want a faster and easier workflow, you can use original external tools and guides to prepare the required folder structure:
 
-NoPayStation FAQ: https://nopaystation.com/faq
+ - NoPayStation FAQ: https://nopaystation.com/faq
 
-pkg2zip (fork by lusid1): https://github.com/lusid1/pkg2zip
+ - pkg2zip (fork by lusid1): https://github.com/lusid1/pkg2zip
 
-Alternative setup guide used as reference: https://www.cfwaifu.com/nopaystation/
+ - Alternative setup guide used as reference: https://www.cfwaifu.com/nopaystation/
 
 The NoPayStation FAQ includes the original references for NPS Browser download and setup.
 
@@ -109,27 +109,19 @@ If you choose to use NPS Browser together with pkg2zip, setting up the correct f
 Following the previous instructions will lead you to have the exact structure necessary to make the BAT file work correctly.
 
 ## Quick Procedure
-Go to your main working folder.
 
-Set up your preferred external tools to download games and decompress them from .pkg to the right folder structure.
+1. Go to your main working folder.
+2. Set up your preferred external tools to download games and decompress them from .pkg to the right folder structure.
+3. Make sure it contains app, addcont, and patch for your downloaded games.
+4. Place the BAT file from this repository in the same folder.
+5. Place TITLEID_NAME_MATCH.txt in the same folder.
+6. Choose the BAT version you want to use:
+  - WinRAR-based
+  - 7-Zip-based
+  - Windows built-in compression
+7. Run the selected BAT file.
 
-Make sure it contains app, addcont, and patch for your downloaded games.
-
-Place the BAT file from this repository in the same folder.
-
-Place TITLEID_NAME_MATCH.txt in the same folder.
-
-Choose the BAT version you want to use:
-
-WinRAR-based
-
-7-Zip-based
-
-Windows built-in compression
-
-Run the selected BAT file.
-
-Output Naming
+## Output Naming
 The script first creates the archive using this raw format:
 
 text
