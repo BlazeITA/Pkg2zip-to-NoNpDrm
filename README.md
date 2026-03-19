@@ -127,6 +127,40 @@ Following the previous instructions will lead you to have the exact structure ne
     
 7. Run the selected BAT file.
 
+## What the Script Does
+
+Once launched, the script will:
+
+ 1. Detect the available compressor for the chosen version.
+ 2. Read the list of TITLEID folders inside app.
+ 3. Check the source structure for each title and display:
+
+- GAME = [X] or [ ]
+
+- UPDATE = [X] or [ ]
+
+- DLCS = [X] or [ ]
+
+4. Check whether the final renamed ZIP already exists.
+
+5. Check whether a raw TITLEID_Vita3K_Ready.zip already exists.
+
+6. Create a temporary folder.
+
+7. Rebuild the correct merged structure inside that temporary folder.
+
+8. Compress the rebuilt result into a final ZIP archive.
+
+9. Rename the ZIP using TITLEID_NAME_MATCH.txt.
+
+10. Delete the temporary folder after compression is complete.
+
+The final ZIP is intended to contain the merged result of:
+
+- the base game
+- the related update data
+- the related DLC data
+
 ## Output Naming
 
 Archives are first created using this raw format:
@@ -148,45 +182,7 @@ Persona 4 Golden [EU].zip
 
 If the final renamed ZIP already exists, the script skips it.
 
-## What the Script Does
-
-Once launched, the script will:
-
-Detect the available compressor for the chosen version.
-
-Read the list of TITLEID folders inside app.
-
-Check the source structure for each title and display:
-
-GAME = [X] or [ ]
-
-UPDATE = [X] or [ ]
-
-DLCS = [X] or [ ]
-
-Check whether the final renamed ZIP already exists.
-
-Check whether a raw TITLEID_Vita3K_Ready.zip already exists.
-
-Create a temporary folder.
-
-Rebuild the correct merged structure inside that temporary folder.
-
-Compress the rebuilt result into a final ZIP archive.
-
-Rename the ZIP using TITLEID_NAME_MATCH.txt.
-
-Delete the temporary folder after compression is complete.
-
-The final ZIP is intended to contain the merged result of:
-
-the base game
-
-the related update data
-
-the related DLC data
-
-Limitations
+## Limitations
 The script depends on the correctness of the source folder structure.
 
 Automatic final renaming depends on TITLEID_NAME_MATCH.txt.
