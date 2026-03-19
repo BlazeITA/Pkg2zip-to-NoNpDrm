@@ -148,7 +148,8 @@ Persona 4 Golden [EU].zip
 
 If the final renamed ZIP already exists, the script skips it.
 
-What the Script Does
+## What the Script Does
+
 Once launched, the script will:
 
 Detect the available compressor for the chosen version.
