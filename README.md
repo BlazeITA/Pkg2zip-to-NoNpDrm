@@ -4,7 +4,7 @@ Automation scripts for compressing PlayStation Vita content into NoNpDrm-style Z
 
 This project is for **Windows 10/11 only**.
 
-The only real requirement is having the correct folder structure based on `app`, `addcont`, and `patch`.
+The strict requirements are having the correct folder structure based on `app`, `addcont`, and `patch`, and having a `TITLEID_NAME_MATCH.txt` file containing the title mapping used for final ZIP renaming.
 
 Using **NPS Browser** and **pkg2zip** is optional, but strongly recommended because they make setup and preparation much easier.
 
@@ -22,26 +22,33 @@ Included variants:
 - a BAT script that uses **7-Zip**
 - a BAT script that uses the built-in **Windows compression**
 
+All three variants are intended to:
+
+- process all detected `TITLEID` folders inside `app`
+- check the source structure for each title
+- merge base game, update, and DLC when present
+- create a temporary Vita3K-ready structure
+- compress the rebuilt content into a ZIP archive
+- automatically rename the final ZIP through `TITLEID_NAME_MATCH.txt`
+- skip recompression if the renamed final ZIP already exists
+- delete the temporary folder after processing
+
 
 
 ## Requirements
 
-- WinRAR — requires WinRAR.exe; supported in the script folder, a local WinRAR folder, standard install paths, or PATH.
-- 7-Zip — requires 7z.exe; supported in the script folder, a local 7-Zip folder, standard install paths, or PATH.
-- Windows built-in — no external software required, but less reliable for large archives.
+### Common requirements
 
-Windows built-in — no external software required, but less reliable for large archives.
-
-Recommendation
-WinRAR — recommended for its clearer compression progress display and for not having the file size limitations of the built-in Windows compression method.
-
-To use these scripts correctly, you need a main folder containing:
+To use these scripts correctly, you need a main working folder containing:
 
 - `app`
 - `addcont`
 - `patch`
 
-You must also place the BAT file downloaded from this repository inside that same main folder.
+You must also place inside that same main folder:
+
+- the BAT file downloaded from this repository
+- the `TITLEID_NAME_MATCH.txt` mapping file
 
 Required final structure:
 
@@ -57,17 +64,26 @@ folder
 ├─ patch
 │  └─ TITLEID
 │     └─ patch files
+├─ TITLEID_NAME_MATCH.txt
 ├─ chosen_version.bat
 ```
-
 The exact tool used to create this structure does not matter.
 
 You do not have to use NPS Browser or pkg2zip.
 
 What matters is that the folders and files are already arranged correctly.
 
-## Recommended Preparation Tools
+Tool-specific requirements
+WinRAR version — requires WinRAR.exe; supported in the script folder, a local WinRAR folder, standard install paths, or PATH. [cite:197]
 
+7-Zip version — requires 7z.exe; supported in the script folder, a local 7-Zip folder, standard install paths, or PATH.
+
+Windows built-in version — no external software required, but less reliable for large archives.
+
+Recommendation
+WinRAR — recommended because it lets you monitor the progress of an ongoing compression process and handles large files properly.
+
+Recommended Preparation Tools
 If you want a faster and easier workflow, you can use original external tools and guides to prepare the required folder structure:
 
 NoPayStation FAQ: https://nopaystation.com/faq
@@ -80,72 +96,122 @@ The NoPayStation FAQ includes the original references for NPS Browser download a
 
 The CFWaifu guide is an alternative walkthrough to the guidance already available through the official NoPayStation resources.
 
-If you choose to use NPS Browser together with pkg2zip, the preparation phase is usually much easier and faster.
+If you choose to use NPS Browser together with pkg2zip, the preparation phase is usually much easier and faster. [cite:231]
 
-1. Prepare the main working folder.
-2. Right-click the game on NPS Browser.
-3. Click **Download All** if available.
-4. If **Download All** is not available, click **Download and Unpack**.
-5. Then click **Check for Patches**.
-6. Download the available patch for that title.
+Prepare the main working folder.
+
+Right-click the game on NPS Browser.
+
+Click Download All if available.
+
+If Download All is not available, click Download and Unpack.
+
+Then click Check for Patches.
+
+Download the available patch for that title.
 
 Once the preparation is complete, open the configured output folder and run the BAT file of your choice.
 
-## Quick Procedure
+Quick Procedure
+Go to your main working folder.
 
-1. Go to your main working folder.
-2. Set up your preferred external tools to download games and decompress them from .pkg to the right folder structure.
-2. Make sure it contains app, addcont, and patch of your downloaded games.
-3. Place the BAT file from this repository in the same folder.
-4. Choose the BAT version you want to use:
--WinRAR-based
--7-Zip-based
--Windows built-in compression
-5. Run the selected BAT file.
+Set up your preferred external tools to download games and decompress them from .pkg to the right folder structure.
 
-## What the Script Does
+Make sure it contains app, addcont, and patch for your downloaded games.
 
+Place the BAT file from this repository in the same folder.
+
+Place TITLEID_NAME_MATCH.txt in the same folder.
+
+Choose the BAT version you want to use:
+
+WinRAR-based
+
+7-Zip-based
+
+Windows built-in compression
+
+Run the selected BAT file.
+
+Output Naming
+The script first creates the archive using this raw format:
+
+text
+TITLEID_Vita3K_Ready.zip
+If a valid entry exists in TITLEID_NAME_MATCH.txt, the script then renames the final archive to the mapped game name.
+
+Example:
+
+text
+PCSB00245_Vita3K_Ready.zip
+can become:
+
+text
+Persona 4 Golden [EU].zip
+If the renamed ZIP already exists, the script skips recompression and reports that the renamed game is already present in the folder. [cite:197]
+
+What the Script Does
 Once launched, the script will:
 
-1. Inspect the subfolders inside app, addcont, and patch, checking that the titleid has not already been compressed. If it has already been compressed, skip the TitleID.
-2. Use the TitleID as the main matching reference.
-3. Create a temporary folder.
-4. Rebuild the correct merged structure inside that temporary folder.
-5. Compress the rebuilt result into a final ZIP archive.
-6. Delete the temporary folder after compression is complete.
+Detect the available compressor for the chosen version.
 
-Output
-The final archive is generated using this format:
+Read the list of TITLEID folders inside app.
 
-```text
-TITLEID_Vita3k_ready.zip
-```
+Check the source structure for each title and display:
 
-The ZIP is intended to contain the merged result of:
+GAME = [X] or [ ]
+
+UPDATE = [X] or [ ]
+
+DLCS = [X] or [ ]
+
+Check whether the final renamed ZIP already exists.
+
+Check whether a raw TITLEID_Vita3K_Ready.zip already exists.
+
+Create a temporary folder.
+
+Rebuild the correct merged structure inside that temporary folder.
+
+Compress the rebuilt result into a final ZIP archive.
+
+Rename the ZIP using TITLEID_NAME_MATCH.txt.
+
+Delete the temporary folder after compression is complete.
+
+The final ZIP is intended to contain the merged result of:
 
 the base game
+
 the related update data
+
 the related DLC data
 
-## Limitations
-Unfortunately, it was not possible to automatically replace the TitleID with the real game name in the final ZIP filename.
+Limitations
+The script depends on the correctness of the source folder structure.
 
-This is because the folder structure does not provide a constant and reliable reference to the actual game name.
+Automatic final renaming depends on TITLEID_NAME_MATCH.txt.
 
-If you want a more readable filename, you can manually rename the final ZIP after creation.
+If a title is missing from the mapping file, the script can still create the raw ZIP, but it may keep the TITLEID_Vita3K_Ready.zip name.
+
+Some game names may need character cleanup because Windows filenames do not allow certain characters.
 
 The Windows built-in compression variant is the most limited option and may not work reliably with games larger than about 2 GB.
 
-## Notes
+Notes
+Windows only.
 
-- This project would not have been possible without the constant support of AI, as I do not have much experience with coding.
-- Windows only.
-- This repository does not redistribute NPS Browser, pkg2zip, WinRAR, 7-Zip, or other third-party tools.
-- Please obtain any optional external dependency only from its original source.
-- The only strict requirement is the correct folder structure.
-- NPS Browser and pkg2zip are optional, but strongly recommended for convenience and speed.
-- The generated archive is designed as a NoNpDrm-style merged ZIP intended for Vita3K use.
+This repository does not redistribute NPS Browser, pkg2zip, WinRAR, 7-Zip, or other third-party tools.
 
-## License
+Please obtain any optional external dependency only from its original source.
 
+The only strict requirements are the correct folder structure and the presence of TITLEID_NAME_MATCH.txt.
+
+NPS Browser and pkg2zip are optional, but strongly recommended for convenience and speed.
+
+The generated archive is designed as a NoNpDrm-style merged ZIP intended for Vita3K use.
+
+This project was developed with AI assistance. [cite:198]
+
+License
 This repository is licensed under a custom non-commercial attribution license. See the LICENSE file for full terms. For permissions and exceptions, contact andreabietti.business@gmail.com.
