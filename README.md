@@ -75,7 +75,7 @@ What matters is that the folders and files are already arranged correctly.
 
 ## Tool-specific requirements
 
- - WinRAR version — requires WinRAR.exe; supported in the script folder, a local WinRAR folder, standard install paths, or PATH. [cite:197]
+ - WinRAR version — requires WinRAR.exe; supported in the script folder, a local WinRAR folder, standard install paths, or PATH.
 
  - 7-Zip version — requires 7z.exe; supported in the script folder, a local 7-Zip folder, standard install paths, or PATH.
 
@@ -97,7 +97,7 @@ The NoPayStation FAQ includes the original references for NPS Browser download a
 
 The CFWaifu guide is an alternative walkthrough to the guidance already available through the official NoPayStation resources.
 
-If you choose to use NPS Browser together with pkg2zip, setting up the correct folder structure is usually much easier and faster. [cite:231]
+If you choose to use NPS Browser together with pkg2zip, setting up the correct folder structure is usually much easier and faster.
 
 1. Prepare the main working folder.
 2. Right-click the game on NPS Browser.
