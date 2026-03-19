@@ -73,7 +73,8 @@ You do not have to use NPS Browser or pkg2zip.
 
 What matters is that the folders and files are already arranged correctly.
 
-Tool-specific requirements
+## Tool-specific requirements
+
 WinRAR version — requires WinRAR.exe; supported in the script folder, a local WinRAR folder, standard install paths, or PATH. [cite:197]
 
 7-Zip version — requires 7z.exe; supported in the script folder, a local 7-Zip folder, standard install paths, or PATH.
@@ -83,7 +84,7 @@ Windows built-in version — no external software required, but less reliable fo
 Recommendation
 WinRAR — recommended because it lets you monitor the progress of an ongoing compression process and handles large files properly.
 
-Recommended Preparation Tools
+ ## Recommended Preparation Tools
 If you want a faster and easier workflow, you can use original external tools and guides to prepare the required folder structure:
 
 NoPayStation FAQ: https://nopaystation.com/faq
@@ -96,23 +97,18 @@ The NoPayStation FAQ includes the original references for NPS Browser download a
 
 The CFWaifu guide is an alternative walkthrough to the guidance already available through the official NoPayStation resources.
 
-If you choose to use NPS Browser together with pkg2zip, the preparation phase is usually much easier and faster. [cite:231]
+If you choose to use NPS Browser together with pkg2zip, setting up the correct folder structure is usually much easier and faster. [cite:231]
 
-Prepare the main working folder.
+1. Prepare the main working folder.
+2. Right-click the game on NPS Browser.
+3. Click Download All if available.
+4. If Download All is not available, click Download and Unpack.
+5. Then click Check for Patches.
+6. Download the available patch for that title.
 
-Right-click the game on NPS Browser.
+Following the previous instructions will lead you to have the exact structure necessary to make the BAT file work correctly.
 
-Click Download All if available.
-
-If Download All is not available, click Download and Unpack.
-
-Then click Check for Patches.
-
-Download the available patch for that title.
-
-Once the preparation is complete, open the configured output folder and run the BAT file of your choice.
-
-Quick Procedure
+## Quick Procedure
 Go to your main working folder.
 
 Set up your preferred external tools to download games and decompress them from .pkg to the right folder structure.
