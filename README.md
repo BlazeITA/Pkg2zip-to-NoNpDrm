@@ -22,19 +22,6 @@ Included variants:
 - a BAT script that uses **7-Zip**
 - a BAT script that uses the built-in **Windows compression**
 
-All three variants are intended to:
-
-- process all detected `TITLEID` folders inside `app`
-- check the source structure for each title
-- merge base game, update, and DLC when present
-- create a temporary Vita3K-ready structure
-- compress the rebuilt content into a ZIP archive
-- automatically rename the final ZIP through `TITLEID_NAME_MATCH.txt`
-- skip recompression if the renamed final ZIP already exists
-- delete the temporary folder after processing
-
-
-
 ## Requirements
 
 ### Common requirements
