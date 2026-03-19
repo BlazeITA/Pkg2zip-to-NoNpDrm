@@ -128,21 +128,25 @@ Following the previous instructions will lead you to have the exact structure ne
 7. Run the selected BAT file.
 
 ## Output Naming
-The script first creates the archive using this raw format:
 
-text
+Archives are first created using this raw format:
+
+```text
 TITLEID_Vita3K_Ready.zip
-If a valid entry exists in TITLEID_NAME_MATCH.txt, the script then renames the final archive to the mapped game name.
+```
+The final name is resolved through a batch subroutine that uses a small PowerShell lookup to read TITLEID_NAME_MATCH.txt, match the corresponding TITLEID, sanitize invalid Windows filename characters, and return the final archive name.
 
 Example:
 
-text
+```text
 PCSB00245_Vita3K_Ready.zip
-can become:
-
-text
+```
+becomes:
+```text
 Persona 4 Golden [EU].zip
-If the renamed ZIP already exists, the script skips recompression and reports that the renamed game is already present in the folder. [cite:197]
+```
+
+If the final renamed ZIP already exists, the script skips it.
 
 What the Script Does
 Once launched, the script will:
