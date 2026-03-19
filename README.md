@@ -48,7 +48,7 @@ To use these scripts correctly, you need a main working folder containing:
 You must also place inside that same main folder:
 
 - the BAT file downloaded from this repository
-- the `TITLEID_NAME_MATCH.txt` mapping file
+- the `TITLEID_NAME_MATCH.txt` mapping file downloaded from this repository
 
 Required final structure:
 
