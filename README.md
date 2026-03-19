@@ -111,14 +111,20 @@ Following the previous instructions will lead you to have the exact structure ne
 ## Quick Procedure
 
 1. Go to your main working folder.
+   
 2. Set up your preferred external tools to download games and decompress them from .pkg to the right folder structure.
+   
 3. Make sure it contains app, addcont, and patch for your downloaded games.
+   
 4. Place the BAT file from this repository in the same folder.
+   
 5. Place TITLEID_NAME_MATCH.txt in the same folder.
+    
 6. Choose the BAT version you want to use:
   - WinRAR-based
   - 7-Zip-based
   - Windows built-in compression
+    
 7. Run the selected BAT file.
 
 ## Output Naming
