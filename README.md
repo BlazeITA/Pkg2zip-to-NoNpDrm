@@ -73,7 +73,7 @@ You do not have to use NPS Browser or pkg2zip.
 
 What matters is that the folders and files are already arranged correctly.
 
-## Tool-specific requirements
+### Tool-specific requirements
 
  - WinRAR version — requires WinRAR.exe; supported in the script folder, a local WinRAR folder, standard install paths, or PATH.
 
