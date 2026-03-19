@@ -97,7 +97,7 @@ The NoPayStation FAQ includes the original references for NPS Browser download a
 
 The CFWaifu guide is an alternative walkthrough to the guidance already available through the official NoPayStation resources.
 
-If you choose to use NPS Browser together with pkg2zip, setting up the correct folder structure is usually much easier and faster.
+If you choose to use NPS Browser together with pkg2zip, downloading the games and setting up the correct folder structure is usually much easier and faster.
 
 1. Prepare the main working folder.
 2. Right-click the game on NPS Browser.
